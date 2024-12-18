@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>{{session.quizid.name}}</h3>
+
+<p>Marks: {{session.total_marks}}</p>
+<p>Correct Answers: {{session.correct_ans}}</p>
+<p>Incorrect Answers: {{session.incorrect_ans}}</p>
+
+{% for ques in analysis %}
+<div class="ques1 {% if ques.user_ans == ques.correct_ans %}correct{% else %}incorrect{% endif %}">
+    <h4>{{ques.question}}</h4>
+    <p>{{ques.user_ans}}</p>
+    <p>{{ques.correct_ans}}</p>
+</div>
+{% endfor %}
+
+{% endblock %}

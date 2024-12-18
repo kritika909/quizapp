@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="quiz-container">
+    <h2>{{questions.quizid.name}}</h2>
+    {% for question in questions %}
+    <div class="question">
+        <h4>{{question.ques}}</h4>
+        <form method="post" action="">
+            {% csrf_token %}
+            <input type="hidden" name="sessionid" value="{{ sessionid }}">
+            <input type="hidden" name="quesid" value="{{ question.id }}">
+            
+            
+            <div>
+                <input type="radio" id="optionA{{ question.id }}" name="optiona" value="A"
+                       {% if request.POST.optiona == 'A' %} checked {% endif %} >
+                <label for="optionA{{ question.id }}">{{ question.optionA }}</label>
+            </div>
+
+            <div>
+                <input type="radio" id="optionB{{ question.id }}" name="optionb" value="B"
+                       {% if request.POST.optionb == 'B' %} checked {% endif %} >
+                <label for="optionB{{ question.id }}">{{ question.optionB }}</label>
+            </div>
+
+            <div>
+                <input type="radio" id="optionC{{ question.id }}" name="optionc" value="C" 
+                       {% if request.POST.optionc == 'C' %} checked {% endif %} >
+                <label for="optionC{{ question.id }}">{{ question.optionC }}</label>
+            </div>
+
+            <div>
+                <input type="radio" id="optionD{{ question.id }}" name="optiond" value="D" 
+                       {% if request.POST.optiond == 'D'%} checked {% endif %} >
+                <label for="optionD{{ question.id }}">{{ question.optionD }}</label>
+            </div>
+            
+            
+        </form>
+    </div>
+    {% endfor %}
+    
+        <a href="/quiz/result/{{sessionid}}"><button type="submit" class="subbmit-button">Submit</button></a>
+   
+
+
+
+</div>
+
+
+{% endblock %}

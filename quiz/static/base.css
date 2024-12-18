@@ -1,0 +1,178 @@
+body{
+    background-color: #ffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #9334ea;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Poppins;
+}
+
+/* Navigation links */
+.navbar .nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-family: Poppins;
+}
+
+.navbar .nav-links a:hover {
+    color: #f0a500;
+}
+
+.footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center; /* Center-align the text */
+    padding: 15px 0; /* Add some padding */
+    font-size: 14px; /* Adjust font size */
+    position: relative; /* Keep it at the bottom of the content */
+    bottom: 0;
+    width: 100%; /* Ensure it spans the full width */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for style */
+}
+
+.footer p {
+    margin: 0; /* Remove default paragraph margin */
+    font-family: Arial, sans-serif; /* Ensure a clean font */
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Adjust cards in rows for responsiveness */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center-align the cards */
+    padding: 20px;
+     /* Light background for contrast */
+}
+
+/* Individual card */
+.card {
+    background-color: #fff; /* White background */
+    border: 2px solid #ddd; /* Subtle border for separation */
+    border-radius: 8px; /* Rounded corners */
+    
+    width: 300px; /* Fixed width for uniformity */
+    padding: 20px;
+    text-align:left; /* Center text alignment */
+   
+}
+
+/* Hover effect */
+.card:hover {
+    border-color: #9334ea;
+}
+
+/* Quiz name (title) */
+.card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+/* Quiz details */
+.card p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+
+
+.quiz-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Quiz title */
+.quiz-container h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Individual question container */
+.quiz-container .question {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Question text */
+.quiz-container .question h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #222;
+}
+
+/* Option styles */
+.quiz-container .option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Radio button styling */
+.quiz-container input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #007bff; /* Modern browsers use this for the radio button color */
+    transform: scale(1.2); /* Makes the radio button slightly larger */
+}
+
+/* Labels for options */
+.quiz-container label {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Submit button styling */
+.quiz-container .submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color:#9334ea;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none; /* Removes underline from link */
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+.quiz-container .submit-button:hover {
+    background-color: #fff;
+    border-color: #9334ea;
+    border-radius: 2px;
+}
